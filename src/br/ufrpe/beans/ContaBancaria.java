@@ -1,3 +1,4 @@
+package br.ufrpe.beans;
 
 public class ContaBancaria {
 	private String CPF;

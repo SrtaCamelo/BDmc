@@ -1,3 +1,4 @@
+package br.ufrpe.beans;
 import java.time.LocalDateTime;
 
 public class Cartao {
