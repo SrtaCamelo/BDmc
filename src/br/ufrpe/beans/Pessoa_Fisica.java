@@ -1,7 +1,7 @@
 package br.ufrpe.beans;
 import java.time.LocalDate;
 
-public abstract class Pessoa_Fisica {
+public class Pessoa_Fisica {
 	private String primeiro_nome, medio_nome, ultimo_nome;
 	private String cpf;
 	private LocalDate nascimento;
