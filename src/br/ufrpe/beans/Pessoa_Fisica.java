@@ -61,6 +61,4 @@ public class Pessoa_Fisica {
 		this.end = end;
 	}
 	
-	
-
 }
