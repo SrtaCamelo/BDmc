@@ -1,4 +1,4 @@
-package br.ufrpe.beans;
+package br.ufrpe.beans.finalizadas;
 
 public class Carro {
 	private String marca;

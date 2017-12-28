@@ -1,0 +1,51 @@
+package br.ufrpe.beans.finalizadas;
+
+import java.time.LocalDateTime;
+
+public class Meta {
+	private static int codigo = 0;
+	private float valor;
+	private LocalDateTime data_inicio, data_fim;
+	private Situacao situacao;
+	
+	public Meta(float valor, LocalDateTime data_inicio, LocalDateTime data_fim) {
+		this.valor = valor;
+		this.data_inicio = data_inicio;
+		this.data_fim = data_fim;
+		this.codigo += 1;
+	}
+
+	public float getValor() {
+		return valor;
+	}
+
+	public LocalDateTime getData_inicio() {
+		return data_inicio;
+	}
+
+	public LocalDateTime getData_fim() {
+		return data_fim;
+	}
+
+	public Situacao getSituacao() {
+		return situacao;
+	}
+
+	public void setValor(float valor) {
+		this.valor = valor;
+	}
+
+	public void setData_inicio(LocalDateTime data_inicio) {
+		this.data_inicio = data_inicio;
+	}
+
+	public void setData_fim(LocalDateTime data_fim) {
+		this.data_fim = data_fim;
+	}
+
+	public void setSituacao(Situacao situacao) {
+		this.situacao = situacao;
+	}
+	
+	
+}

@@ -1,4 +1,4 @@
-package br.ufrpe.beans;
+package br.ufrpe.beans.finalizadas;
 
 public class Endereco {
 	private String nome, cidade, bairro, estado;

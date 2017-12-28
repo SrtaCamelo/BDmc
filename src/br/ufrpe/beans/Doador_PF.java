@@ -1,5 +1,7 @@
 package br.ufrpe.beans;
-import java.time.LocalDateTime;;
+import java.time.LocalDateTime;
+
+import br.ufrpe.beans.finalizadas.Cartao;;
 
 /**
  * Como vai ser essa classe?

@@ -1,4 +1,4 @@
-package br.ufrpe.beans;
+package br.ufrpe.beans.finalizadas;
 
 public class Banco {
 	private short codigo;
