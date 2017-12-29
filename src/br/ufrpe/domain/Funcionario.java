@@ -1,32 +1,27 @@
-package br.ufrpe.beans;
+package br.ufrpe.domain;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import br.ufrpe.beans.finalizadas.Avaliacao;
-import br.ufrpe.beans.finalizadas.Endereco;
-import br.ufrpe.beans.finalizadas.Login;
-import br.ufrpe.beans.finalizadas.Usuario;
+import br.ufrpe.andamento.Instituicao;
 
-public class Pessoa_Fisica extends Usuario{
+public class Funcionario extends Usuario{
 	private String primeiro_nome, medio_nome, ultimo_nome;
 	private String cpf;
 	private LocalDate nascimento;
 	private boolean ativo = true;
-	private Endereco end;
-	private ArrayList<Avaliacao> avaliacoes = new ArrayList<>();
-	//TODO precisa fazer uma classe de qualificação, mas não entendi direito.
-	//TODO muitas coisas ainda para por nessa classe.
+	private Instituicao representante_instituicao;
 	
-	public Pessoa_Fisica(String email, Login login,
+	public Funcionario(String email, Login login, ArrayList<Endereco> end,
 			String primeiro_nome, String medio_nome, String ultimo_nome, String cpf, LocalDate nascimento,
-			Endereco end) {
-		super(email, login);
+			Instituicao representante_instituicao) {
+		super(email, login, end);
 		this.primeiro_nome = primeiro_nome;
 		this.medio_nome = medio_nome;
 		this.ultimo_nome = ultimo_nome;
 		this.cpf = cpf;
 		this.nascimento = nascimento;
-		this.end = end;
+		this.representante_instituicao = representante_instituicao;
 	}
 
 	public String getPrimeiro_nome() {
@@ -53,12 +48,8 @@ public class Pessoa_Fisica extends Usuario{
 		return ativo;
 	}
 
-	public Endereco getEnd() {
-		return end;
-	}
-
-	public ArrayList<Avaliacao> getAvaliacoes() {
-		return avaliacoes;
+	public Instituicao getRepresentante_instituicao() {
+		return representante_instituicao;
 	}
 
 	public void setPrimeiro_nome(String primeiro_nome) {
@@ -77,13 +68,7 @@ public class Pessoa_Fisica extends Usuario{
 		this.ativo = ativo;
 	}
 
-	public void setEnd(Endereco end) {
-		this.end = end;
+	public void setRepresentante_instituicao(Instituicao representante_instituicao) {
+		this.representante_instituicao = representante_instituicao;
 	}
-
-	public void setAvaliacoes(ArrayList<Avaliacao> avaliacoes) {
-		this.avaliacoes = avaliacoes;
-	}
-	
-	
 }

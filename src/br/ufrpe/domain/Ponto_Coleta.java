@@ -1,9 +1,9 @@
-package br.ufrpe.beans.finalizadas;
+package br.ufrpe.domain;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-import br.ufrpe.beans.Disponibilidade;
+import br.ufrpe.andamento.Disponibilidade;
 
 public class Ponto_Coleta {
 	private static int codigo = 0;

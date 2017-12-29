@@ -1,7 +1,7 @@
-package br.ufrpe.beans;
+package br.ufrpe.andamento;
 import java.time.LocalDateTime;
 
-import br.ufrpe.beans.finalizadas.Cartao;
+import br.ufrpe.domain.Cartao;
 
 public class Doacao_Financeiro extends Doacao {
 	private double valor;

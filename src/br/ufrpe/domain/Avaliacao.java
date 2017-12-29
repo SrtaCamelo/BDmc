@@ -1,4 +1,4 @@
-package br.ufrpe.beans.finalizadas;
+package br.ufrpe.domain;
 
 public enum Avaliacao {
 	INSATISFATORIO(1), POUCOINSATISFATORIO(2), MEDIO(3), POUCOSATISFATORIO(4), SATISFATORIO(5);

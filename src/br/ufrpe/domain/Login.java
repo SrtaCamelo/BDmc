@@ -1,4 +1,4 @@
-package br.ufrpe.beans.finalizadas;
+package br.ufrpe.domain;
 
 public class Login {
 	private String login;

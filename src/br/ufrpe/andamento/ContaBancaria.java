@@ -1,6 +1,6 @@
-package br.ufrpe.beans;
+package br.ufrpe.andamento;
 
-import br.ufrpe.beans.finalizadas.Banco;
+import br.ufrpe.domain.Banco;
 
 public class ContaBancaria {
 	private String cpf_cnpj;

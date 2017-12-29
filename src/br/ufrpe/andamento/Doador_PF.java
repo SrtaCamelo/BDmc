@@ -1,18 +1,9 @@
-package br.ufrpe.beans;
+package br.ufrpe.andamento;
 import java.time.LocalDateTime;
 
-import br.ufrpe.beans.finalizadas.Cartao;;
+import br.ufrpe.domain.Cartao;
 
-/**
- * Como vai ser essa classe?
- * 
- * ACHO QUE PODERIA TER ATRIBUTOS DIFERENTES NA PROPRIA CLASSE DE PESSOA_FISICA!!
- * 
- * @author fer
- *
- */
-
-public class Doador_PF{
+public class Doador_PF {
 	private Cartao cartao;
 	private ContaBancaria conta;
 	private LocalDateTime UltimaDoacao;	

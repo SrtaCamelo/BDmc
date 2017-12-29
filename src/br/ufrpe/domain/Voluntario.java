@@ -1,11 +1,11 @@
-package br.ufrpe.beans.finalizadas;
+package br.ufrpe.domain;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-import br.ufrpe.beans.Disponibilidade;
-import br.ufrpe.beans.Pessoa_Fisica;
+import br.ufrpe.andamento.Disponibilidade;
+import br.ufrpe.andamento.Pessoa_Fisica;
 
 public class Voluntario{
 	private Pessoa_Fisica pessoa;

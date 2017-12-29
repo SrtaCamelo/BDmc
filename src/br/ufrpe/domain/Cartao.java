@@ -1,4 +1,4 @@
-package br.ufrpe.beans.finalizadas;
+package br.ufrpe.domain;
 import java.time.LocalDateTime;
 
 public class Cartao {

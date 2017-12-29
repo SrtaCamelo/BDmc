@@ -1,4 +1,4 @@
-package br.ufrpe.beans;
+package br.ufrpe.andamento;
 
 public class Transferencia {
 	private String agenciaDestino;

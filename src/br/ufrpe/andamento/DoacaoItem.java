@@ -1,4 +1,4 @@
-package br.ufrpe.beans;
+package br.ufrpe.andamento;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
