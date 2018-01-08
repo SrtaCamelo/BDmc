@@ -1,11 +1,11 @@
-package br.ufrpe.domain;
+package br.ufrpe.minhacapanha.domain;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import br.ufrpe.andamento.Disponibilidade;
 
-public class Ponto_Coleta {
+public class Ponto_Coleta extends GenericDomain {
 	private static int codigo = 0;
 	private String descricao;
 	private String observacao;
@@ -24,6 +24,10 @@ public class Ponto_Coleta {
 		this.codigo += 1;
 	}
 
+	public Ponto_Coleta(){
+		
+	}
+	
 	public String getDescricao() {
 		return descricao;
 	}

@@ -1,6 +1,6 @@
-package br.ufrpe.domain;
+package br.ufrpe.minhacapanha.domain;
 
-public class Login {
+public class Login extends GenericDomain {
 	private String login;
 	private int senha;
 	

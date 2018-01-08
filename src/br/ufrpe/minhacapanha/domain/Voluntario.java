@@ -1,4 +1,4 @@
-package br.ufrpe.domain;
+package br.ufrpe.minhacapanha.domain;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import br.ufrpe.andamento.Disponibilidade;
 import br.ufrpe.andamento.Pessoa_Fisica;
 
-public class Voluntario{
+public class Voluntario extends GenericDomain {
 	private Pessoa_Fisica pessoa;
 	private LocalDateTime inicio_voluntariado, fim_voluntariado;
 	private boolean possui_carro;

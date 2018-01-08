@@ -2,9 +2,9 @@ package br.ufrpe.andamento;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-import br.ufrpe.domain.Endereco;
-import br.ufrpe.domain.Login;
-import br.ufrpe.domain.Usuario;
+import br.ufrpe.minhacapanha.domain.Endereco;
+import br.ufrpe.minhacapanha.domain.Login;
+import br.ufrpe.minhacapanha.domain.Usuario;
 
 public class Pessoa_Fisica extends Usuario{
 	private String primeiro_nome, medio_nome, ultimo_nome;

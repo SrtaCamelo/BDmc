@@ -1,6 +1,6 @@
 package br.ufrpe.andamento;
 
-import br.ufrpe.domain.Voluntario;
+import br.ufrpe.minhacapanha.domain.Voluntario;
 
 public class Atividade {
 	private Campanha campanha;

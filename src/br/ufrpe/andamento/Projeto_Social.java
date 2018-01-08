@@ -3,7 +3,7 @@ package br.ufrpe.andamento;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-import br.ufrpe.domain.Voluntario;
+import br.ufrpe.minhacapanha.domain.Voluntario;
 
 public class Projeto_Social {
 	private String tipo, nome, descricao, objetivo;

@@ -1,7 +1,7 @@
 package br.ufrpe.andamento;
 import java.time.LocalDateTime;
 
-import br.ufrpe.domain.Cartao;
+import br.ufrpe.minhacapanha.domain.Cartao;
 
 public class Doador_PF {
 	private Cartao cartao;

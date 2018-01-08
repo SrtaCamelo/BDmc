@@ -1,20 +1,18 @@
-package br.ufrpe.domain;
+package br.ufrpe.minhacapanha.domain;
 
-public class Banco {
-	private short codigo;
+public class Banco extends GenericDomain {
 	private String nome;
 	private String cnpj;
 	private String razao_social;
 	
-	public Banco(short codigo, String nome, String cnpj, String razao_social) {
-		this.codigo = codigo;
+	public Banco(String nome, String cnpj, String razao_social) {
 		this.nome = nome;
 		this.cnpj = cnpj;
 		this.razao_social = razao_social;
 	}
 
-	public short getCodigo() {
-		return codigo;
+	public Banco(){
+		
 	}
 
 	public String getNome() {

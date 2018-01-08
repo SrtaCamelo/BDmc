@@ -1,10 +1,11 @@
-package br.ufrpe.domain;
+package br.ufrpe.minhacapanha.domain;
 
 import java.time.LocalDateTime;
 
 import br.ufrpe.andamento.Campanha;
+import br.ufrpe.minhacampanha.enumeracao.Avaliacao;
 
-public class Avaliacoes {
+public class Avaliacoes extends GenericDomain {
 	private Avaliacao nota; 
 	private String comentario;
 	private LocalDateTime data_avaliacao;
@@ -29,6 +30,9 @@ public class Avaliacoes {
 		this.campanha_fez = campanha_fez;
 	}
 
+	public Avaliacoes(){
+		//construtor vazio para utilização dos metodos set
+	}
 	public Avaliacao getNota() {
 		return nota;
 	}

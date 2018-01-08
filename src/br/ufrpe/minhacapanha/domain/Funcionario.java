@@ -1,4 +1,4 @@
-package br.ufrpe.domain;
+package br.ufrpe.minhacapanha.domain;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -24,6 +24,9 @@ public class Funcionario extends Usuario{
 		this.representante_instituicao = representante_instituicao;
 	}
 
+	public Funcionario(){
+		
+	}
 	public String getPrimeiro_nome() {
 		return primeiro_nome;
 	}

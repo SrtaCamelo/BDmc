@@ -1,6 +1,6 @@
-package br.ufrpe.domain;
+package br.ufrpe.minhacapanha.domain;
 
-public class Carro {
+public class Carro extends GenericDomain {
 	private String marca;
 	private String placa;
 	private String estado, cidade;
@@ -12,6 +12,9 @@ public class Carro {
 		this.cidade = cidade;
 	}
 
+	public Carro(){
+		
+	}
 	public String getMarca() {
 		return marca;
 	}

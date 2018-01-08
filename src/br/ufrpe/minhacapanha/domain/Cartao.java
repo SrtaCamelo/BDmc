@@ -1,23 +1,26 @@
-package br.ufrpe.domain;
+package br.ufrpe.minhacapanha.domain;
 import java.time.LocalDateTime;
 
-public class Cartao {
+public class Cartao extends GenericDomain {
 	private String numero;
 	private String Bandeira;
 	private String nomeCartao;
-	private String codigo;
+	private String codigoCartao;
 	private LocalDateTime validade;
 	
 	
-	public Cartao(String numero, String bandeira, String nomeCartao, String codigo, LocalDateTime validade) {
+	public Cartao(String numero, String bandeira, String nomeCartao, String codigoCartao, LocalDateTime validade) {
 		this.numero = numero;
 		Bandeira = bandeira;
 		this.nomeCartao = nomeCartao;
-		this.codigo = codigo;
+		this.codigoCartao = codigoCartao;
 		this.validade = validade;
 	}
 
-
+	public Cartao(){
+		
+	}
+	
 	public String getNumero() {
 		return numero;
 	}
@@ -30,11 +33,6 @@ public class Cartao {
 
 	public String getNomeCartao() {
 		return nomeCartao;
-	}
-
-
-	public String getCodigo() {
-		return codigo;
 	}
 
 

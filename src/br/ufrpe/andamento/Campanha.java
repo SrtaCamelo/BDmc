@@ -3,11 +3,11 @@ package br.ufrpe.andamento;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-import br.ufrpe.domain.Avaliacao;
-import br.ufrpe.domain.Avaliacoes;
-import br.ufrpe.domain.Meta;
-import br.ufrpe.domain.Ponto_Coleta;
-import br.ufrpe.domain.Situacao;
+import br.ufrpe.minhacampanha.enumeracao.Avaliacao;
+import br.ufrpe.minhacampanha.enumeracao.Situacao;
+import br.ufrpe.minhacapanha.domain.Avaliacoes;
+import br.ufrpe.minhacapanha.domain.Meta;
+import br.ufrpe.minhacapanha.domain.Ponto_Coleta;
 
 public class Campanha {
 	private static int id = 0;

@@ -1,4 +1,4 @@
-package br.ufrpe.domain;
+package br.ufrpe.minhacampanha.enumeracao;
 
 public enum Situacao {
 	CRITICA(1), POUCOCRITICA(2), MEDIANA(3), SATISFATORIO(4), ALCANCADA(5);

@@ -1,9 +1,9 @@
-package br.ufrpe.domain;
+package br.ufrpe.minhacapanha.domain;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-public abstract class Usuario {
+public abstract class Usuario extends GenericDomain {
 	private static int id = 0;
 	private String email;
 	private Login login;
@@ -11,7 +11,9 @@ public abstract class Usuario {
 	private ArrayList<Endereco> enderecos = new ArrayList<>();
 	private ArrayList<Avaliacoes> avaliacoes_efetuadas = new ArrayList<>();
 	
-	public Usuario(){}
+	public Usuario(){
+		
+	}
 
 	public Usuario(String email, Login login, ArrayList<Endereco> enderecos) {
 		this.email = email;

@@ -1,6 +1,6 @@
 package br.ufrpe.andamento;
 
-import br.ufrpe.domain.Banco;
+import br.ufrpe.minhacapanha.domain.Banco;
 
 public class ContaBancaria {
 	private String cpf_cnpj;

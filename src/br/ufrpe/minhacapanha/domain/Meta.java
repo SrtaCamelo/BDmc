@@ -1,8 +1,10 @@
-package br.ufrpe.domain;
+package br.ufrpe.minhacapanha.domain;
 
 import java.time.LocalDateTime;
 
-public class Meta {
+import br.ufrpe.minhacampanha.enumeracao.Situacao;
+
+public class Meta extends GenericDomain {
 	private static int codigo = 0;
 	private float valor;
 	private LocalDateTime data_inicio, data_fim;
@@ -15,6 +17,9 @@ public class Meta {
 		this.codigo += 1;
 	}
 
+	public Meta(){
+		
+	}
 	public float getValor() {
 		return valor;
 	}

@@ -1,6 +1,6 @@
-package br.ufrpe.domain;
+package br.ufrpe.minhacapanha.domain;
 
-public class Endereco {
+public class Endereco extends GenericDomain {
 	private String nome, cidade, bairro, estado;
 	private String cep;
 	private String ponto_referencia, comple_1, comple_2;

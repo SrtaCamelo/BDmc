@@ -3,9 +3,9 @@ package br.ufrpe.andamento;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-import br.ufrpe.domain.Endereco;
-import br.ufrpe.domain.Funcionario;
-import br.ufrpe.domain.Usuario;
+import br.ufrpe.minhacapanha.domain.Endereco;
+import br.ufrpe.minhacapanha.domain.Funcionario;
+import br.ufrpe.minhacapanha.domain.Usuario;
 
 public class Instituicao{
 	private String cnpj, nome_fantasia;
