@@ -1,26 +1,25 @@
-package br.ufrpe.andamento;
-import java.time.LocalDate;
-import java.util.ArrayList;
+package br.ufrpe.minhacapanha.domain;
 
-import br.ufrpe.minhacapanha.domain.Endereco;
-import br.ufrpe.minhacapanha.domain.Login;
-import br.ufrpe.minhacapanha.domain.Usuario;
+import java.time.LocalDate;
 
 public class Pessoa_Fisica extends Usuario{
 	private String primeiro_nome, medio_nome, ultimo_nome;
-	private String cpf;
+	private String cpf, telefone;
 	private LocalDate nascimento;
 	private boolean ativo = true;
-	//TODO precisa fazer uma classe de qualificação, mas não entendi direito.
-	
-	public Pessoa_Fisica(String email, Login login, ArrayList<Endereco> end,
-			String primeiro_nome, String medio_nome, String ultimo_nome, String cpf, LocalDate nascimento) {
-		super(email, login, end);
+	private boolean anonimato = false; 
+
+	public Pessoa_Fisica(String email, Login login,
+			String primeiro_nome, String medio_nome, String ultimo_nome, String cpf, String telefone,
+			LocalDate nascimento, boolean anonimato) {
+		super(email, login);
 		this.primeiro_nome = primeiro_nome;
 		this.medio_nome = medio_nome;
 		this.ultimo_nome = ultimo_nome;
 		this.cpf = cpf;
+		this.telefone = telefone;
 		this.nascimento = nascimento;
+		this.anonimato = anonimato;
 	}
 
 	public String getPrimeiro_nome() {
@@ -39,12 +38,20 @@ public class Pessoa_Fisica extends Usuario{
 		return cpf;
 	}
 
+	public String getTelefone() {
+		return telefone;
+	}
+
 	public LocalDate getNascimento() {
 		return nascimento;
 	}
 
 	public boolean isAtivo() {
 		return ativo;
+	}
+
+	public boolean isAnonimato() {
+		return anonimato;
 	}
 
 	public void setPrimeiro_nome(String primeiro_nome) {
@@ -59,7 +66,15 @@ public class Pessoa_Fisica extends Usuario{
 		this.ultimo_nome = ultimo_nome;
 	}
 
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
 	public void setAtivo(boolean ativo) {
 		this.ativo = ativo;
 	}
+
+	public void setAnonimato(boolean anonimato) {
+		this.anonimato = anonimato;
+	}	
 }

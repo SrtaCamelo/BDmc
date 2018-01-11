@@ -12,9 +12,6 @@ public class Carro extends GenericDomain {
 		this.cidade = cidade;
 	}
 
-	public Carro(){
-		
-	}
 	public String getMarca() {
 		return marca;
 	}

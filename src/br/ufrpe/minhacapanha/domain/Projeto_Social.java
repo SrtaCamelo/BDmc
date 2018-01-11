@@ -3,29 +3,34 @@ package br.ufrpe.minhacapanha.domain;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
-public class Ponto_Coleta extends GenericDomain {
-	private String descricao;
-	private String observacao;
+public class Projeto_Social extends GenericDomain {
+	private String tipo, nome, descricao, objetivo;
 	private LocalDateTime data_inicio, data_fim;
 	
-	public Ponto_Coleta(String descricao, String observacao, LocalDateTime data_inicio, 
+	public Projeto_Social(String tipo, String nome, String descricao, String objetivo, LocalDateTime data_inicio,
 			LocalDateTime data_fim) {
+		this.tipo = tipo;
+		this.nome = nome;
 		this.descricao = descricao;
-		this.observacao = observacao;
+		this.objetivo = objetivo;
 		this.data_inicio = data_inicio;
 		this.data_fim = data_fim;
 	}
 
-	public Ponto_Coleta(){
-		
+	public String getTipo() {
+		return tipo;
 	}
-	
+
+	public String getNome() {
+		return nome;
+	}
+
 	public String getDescricao() {
 		return descricao;
 	}
 
-	public String getObservacao() {
-		return observacao;
+	public String getObjetivo() {
+		return objetivo;
 	}
 
 	public LocalDateTime getData_inicio() {
@@ -36,12 +41,20 @@ public class Ponto_Coleta extends GenericDomain {
 		return data_fim;
 	}
 
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
 
-	public void setObservacao(String observacao) {
-		this.observacao = observacao;
+	public void setObjetivo(String objetivo) {
+		this.objetivo = objetivo;
 	}
 
 	public void setData_inicio(LocalDateTime data_inicio) {
@@ -50,13 +63,5 @@ public class Ponto_Coleta extends GenericDomain {
 
 	public void setData_fim(LocalDateTime data_fim) {
 		this.data_fim = data_fim;
-	}
-
-	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
-	}
-
-	public void setResponsaveis(ArrayList<Disponibilidade> responsaveis) {
-		this.responsaveis = responsaveis;
 	}
 }

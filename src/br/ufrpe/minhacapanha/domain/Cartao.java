@@ -8,7 +8,6 @@ public class Cartao extends GenericDomain {
 	private String codigoCartao;
 	private LocalDateTime validade;
 	
-	
 	public Cartao(String numero, String bandeira, String nomeCartao, String codigoCartao, LocalDateTime validade) {
 		this.numero = numero;
 		Bandeira = bandeira;
@@ -17,10 +16,6 @@ public class Cartao extends GenericDomain {
 		this.validade = validade;
 	}
 
-	public Cartao(){
-		
-	}
-	
 	public String getNumero() {
 		return numero;
 	}

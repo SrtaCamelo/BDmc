@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 import br.ufrpe.minhacampanha.enumeracao.Situacao;
 
 public class Meta extends GenericDomain {
-	private static int codigo = 0;
 	private float valor;
 	private LocalDateTime data_inicio, data_fim;
 	private Situacao situacao;
@@ -14,7 +13,6 @@ public class Meta extends GenericDomain {
 		this.valor = valor;
 		this.data_inicio = data_inicio;
 		this.data_fim = data_fim;
-		this.codigo += 1;
 	}
 
 	public Meta(){

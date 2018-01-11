@@ -1,4 +1,4 @@
-package br.ufrpe.andamento;
+package br.ufrpe.minhacapanha.domain;
 
 import java.time.LocalDateTime;
 
@@ -16,7 +16,8 @@ public class Disponibilidade {
 	 * @param hora_inicio
 	 * @param hora_fim
 	 */
-	public Disponibilidade(String nome, LocalDateTime data, LocalDateTime hora_inicio, LocalDateTime hora_fim) {
+	public Disponibilidade(String nome, LocalDateTime data, LocalDateTime hora_inicio, 
+			LocalDateTime hora_fim) {
 		this.responsavel = nome;
 		this.data = data;
 		this.hora_inicio = hora_inicio;
