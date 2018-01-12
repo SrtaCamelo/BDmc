@@ -1,20 +1,28 @@
 package br.ufrpe.minhacapanha.domain;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Projeto_Social extends GenericDomain {
+public class ProjetoSocial extends GenericDomain {
 	private String tipo, nome, descricao, objetivo;
-	private LocalDateTime data_inicio, data_fim;
+	private LocalDate data_inicio, data_fim;
 	
-	public Projeto_Social(String tipo, String nome, String descricao, String objetivo, LocalDateTime data_inicio,
-			LocalDateTime data_fim) {
+	public ProjetoSocial(String tipo, String nome, String descricao, String objetivo, LocalDate data_inicio,
+			LocalDate data_fim) {
 		this.tipo = tipo;
 		this.nome = nome;
 		this.descricao = descricao;
 		this.objetivo = objetivo;
 		this.data_inicio = data_inicio;
 		this.data_fim = data_fim;
+	}
+
+	public ProjetoSocial(String tipo, String nome, String descricao, String objetivo, LocalDate data_inicio) {
+		this.tipo = tipo;
+		this.nome = nome;
+		this.descricao = descricao;
+		this.objetivo = objetivo;
+		this.data_inicio = data_inicio;
 	}
 
 	public String getTipo() {
@@ -33,11 +41,11 @@ public class Projeto_Social extends GenericDomain {
 		return objetivo;
 	}
 
-	public LocalDateTime getData_inicio() {
+	public LocalDate getData_inicio() {
 		return data_inicio;
 	}
 
-	public LocalDateTime getData_fim() {
+	public LocalDate getData_fim() {
 		return data_fim;
 	}
 
@@ -57,11 +65,7 @@ public class Projeto_Social extends GenericDomain {
 		this.objetivo = objetivo;
 	}
 
-	public void setData_inicio(LocalDateTime data_inicio) {
-		this.data_inicio = data_inicio;
-	}
-
-	public void setData_fim(LocalDateTime data_fim) {
+	public void setData_fim(LocalDate data_fim) {
 		this.data_fim = data_fim;
 	}
 }

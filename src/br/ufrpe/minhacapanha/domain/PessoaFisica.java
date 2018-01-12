@@ -2,14 +2,14 @@ package br.ufrpe.minhacapanha.domain;
 
 import java.time.LocalDate;
 
-public class Pessoa_Fisica extends Usuario{
+public class PessoaFisica extends Usuario{
 	private String primeiro_nome, medio_nome, ultimo_nome;
 	private String cpf, telefone;
 	private LocalDate nascimento;
 	private boolean ativo = true;
 	private boolean anonimato = false; 
 
-	public Pessoa_Fisica(String email, Login login,
+	public PessoaFisica(String email, Login login,
 			String primeiro_nome, String medio_nome, String ultimo_nome, String cpf, String telefone,
 			LocalDate nascimento, boolean anonimato) {
 		super(email, login);

@@ -2,7 +2,7 @@ package br.ufrpe.minhacapanha.domain;
 
 import java.time.LocalDateTime;
 
-public class Disponibilidade {
+public class Disponibilidade extends GenericDomain {
 	private String responsavel;
 	private LocalDateTime data;
 	private LocalDateTime hora_inicio, hora_fim;
