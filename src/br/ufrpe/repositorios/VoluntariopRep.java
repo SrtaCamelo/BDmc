@@ -1,4 +1,7 @@
 package br.ufrpe.repositorios;
+/*
+ * Repositorio Voluntario - Pessoa
+ */
 import java.util.ArrayList;
 
 import br.ufrpe.minhacapanha.domain.*;
