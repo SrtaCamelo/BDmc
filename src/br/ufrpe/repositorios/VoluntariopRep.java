@@ -1,6 +1,6 @@
 package br.ufrpe.repositorios;
 /*
- * Repositorio Voluntario - Pessoa .
+ * Repositorio Voluntario - Pessoa ..
  */
 import java.util.ArrayList;
 
