@@ -6,7 +6,7 @@ public abstract class Usuario extends GenericDomain {
 	private static int id = 0;
 	private String email;
 	private Login login;
-	private LocalDateTime data_criação;
+	private LocalDateTime data_criacao;
 	
 	public Usuario(){
 		
@@ -15,7 +15,7 @@ public abstract class Usuario extends GenericDomain {
 	public Usuario(String email, Login login) {
 		this.email = email;
 		this.login = login;
-		this.data_criação = LocalDateTime.now();
+		this.data_criacao = LocalDateTime.now();
 	}
 
 	public static int getId() {
@@ -30,7 +30,7 @@ public abstract class Usuario extends GenericDomain {
 		return login;
 	}
 
-	public LocalDateTime getData_criação() {
-		return data_criação;
+	public LocalDateTime getData_criacao() {
+		return data_criacao;
 	}
 }
