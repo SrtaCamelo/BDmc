@@ -23,6 +23,14 @@ public class Atividade extends GenericDomain {
 	public void setDuracao(LocalDateTime duracao) {
 		this.duracao = duracao;
 	}
+	public long getCodigoCampanha() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	public String getDuracaoMedia() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 }
