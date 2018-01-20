@@ -1,5 +1,6 @@
 package br.ufrpe.minhacapanha.domain;
 
+import java.sql.Date;
 import java.time.LocalDateTime;
 
 public class Atividade extends GenericDomain {
@@ -27,9 +28,17 @@ public class Atividade extends GenericDomain {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	public String getDuracaoMedia() {
+	public Date getDuracaoMedia() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	public void setCodigoCampanha(long long1) {
+		// TODO Auto-generated method stub
+		
+	}
+	public void setDuracaoMedia(Date date) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

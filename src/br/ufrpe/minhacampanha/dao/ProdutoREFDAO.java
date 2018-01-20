@@ -1,6 +1,5 @@
 package br.ufrpe.minhacampanha.dao;
 
-import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -9,22 +8,20 @@ import java.util.List;
 import com.mysql.jdbc.Connection;
 
 import br.ufrpe.minhacampanha.util.ConnectionFactory;
-import br.ufrpe.minhacapanha.domain.Atividade;
+import br.ufrpe.minhacapanha.domain.ProdutoREF;
 
-public class AtividadeDAO {
+public class ProdutoREFDAO {
 
-	public void criar(Atividade atividade) throws SQLException{
+	public void criar(ProdutoREF produto) throws SQLException{
 		Connection connection = ConnectionFactory.getConnection();
 		java.sql.PreparedStatement stmt = null;
+		
 		try{
-			stmt = connection.prepareStatement("INSERT INTO atividade (id, id_campanha, descricao, tipo,duracao_media)VALUES(?,?,?,?)");
-			stmt.setLong(1, atividade.getCodigo());
-			stmt.setLong(2, atividade.getCodigoCampanha());
-			stmt.setString(3, atividade.getTipo());
-			stmt.setString(4, atividade.getDescricao());
-			stmt.setDate(5, atividade.getDuracaoMedia());
-			
-			stmt.executeUpdate();
+			stmt = connection.prepareStatement("INSERT INTO produto_ref (cod, descricao, cod_barras, marca)VALUES(?,?,?,?)");
+			stmt.setLong(1, produto.getCodigo());
+			stmt.setString(2, produto.getDescricao());
+			stmt.setString(3, produto.getCodigo_barras());
+			stmt.setString(4, produto.getMarca());
 			
 			//JOptionPane.showMessageDialog(null, "Cliente salvo com sucesso");
 			
@@ -36,30 +33,27 @@ public class AtividadeDAO {
 		}
 	}
 	
-	public List<Atividade> listar() throws SQLException{
-
+	public List<ProdutoREF> listar() throws SQLException{
 		Connection connection = ConnectionFactory.getConnection();
 		java.sql.PreparedStatement stmt = null;
 		ResultSet resultSet = null;
 		
-		List<Atividade> atividades = new ArrayList<Atividade>();
+		List<ProdutoREF> produtos = new ArrayList<ProdutoREF>();
 		
 		try{
 		
-			stmt = connection.prepareStatement("SELECT * FROM atividade");
-			resultSet = stmt.executeQuery();
+			stmt = connection.prepareStatement("SELECT * FROM produto_ref");
+			resultSet =stmt.executeQuery();
 		
 			while (resultSet.next()){
 				
-				Atividade atividade = new Atividade();
-				atividade.setCodigo(resultSet.getLong("id"));
-				atividade.setCodigoCampanha(resultSet.getLong("id_campanha"));
-				atividade.setDescricao(resultSet.getString("descricao"));
-				atividade.setTipo(resultSet.getString("tipo"));
-				atividade.setDuracaoMedia(resultSet.getDate("duracao_media"));
+				ProdutoREF produto = new ProdutoREF();
+				produto.setCodigo(resultSet.getLong("cod"));
+				produto.setDescricao(resultSet.getString("descricao"));
+				produto.setCodBarras(resultSet.getString("cod_barras"));
 				
 				
-				atividades.add(atividade);
+				produtos.add(produto);
 			 }
 			
 		}catch (SQLException ex){
@@ -68,16 +62,20 @@ public class AtividadeDAO {
 			ConnectionFactory.closeConnection(connection, stmt, resultSet);
 		}
 		
-		return atividades;
+		return produtos;
 		
 	}
 	
-	public void update(Atividade atividade) throws SQLException{
+	public void update(ProdutoREF produto) throws SQLException{
 		Connection connection = ConnectionFactory.getConnection();
 		java.sql.PreparedStatement stmt = null;
 		
 		try{
-			stmt = connection.prepareStatement("UPDATE atividade SET descricao =  ?, tipo = ?, duracao_media = ? WHERE id = ?");
+			stmt = connection.prepareStatement("UPDATE produto_ref SET descricao = ?, cod_barras = ?, marca = ? WHERE cod = ?");
+			stmt.setString(1, produto.getDescricao());
+			stmt.setString(2, produto.getCodigo_barras());
+			stmt.setString(3, produto.getMarca());
+			stmt.setLong(4, produto.getCodigo());
 			
 			stmt.executeUpdate();
 			
@@ -91,13 +89,13 @@ public class AtividadeDAO {
 		}
 	}
 	
-	public void excluir(Atividade atividade) throws SQLException{
+	public void excluir(ProdutoREF produto) throws SQLException{
 		Connection connection = ConnectionFactory.getConnection();
 		java.sql.PreparedStatement stmt = null;
 		
 		try{
-			stmt = connection.prepareStatement("DELETE FROM atividade WHERE cpf = ?");
-			stmt.setLong(1, atividade.getCodigo());
+			stmt = connection.prepareStatement("DELETE FROM produto_ref WHERE cod = ?");
+			stmt.setLong(1, produto.getCodigo());
 						
 			stmt.executeUpdate();
 			
@@ -109,7 +107,6 @@ public class AtividadeDAO {
 		}finally{
 			ConnectionFactory.closeConnection(connection, stmt);
 		}
-		
 		
 	}
 }

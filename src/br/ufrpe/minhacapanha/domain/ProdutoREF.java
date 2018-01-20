@@ -11,6 +11,9 @@ public class ProdutoREF extends GenericDomain {
 		this.marca = marca;
 	}
 
+	public ProdutoREF(){
+		
+	}
 	public String getDescricao() {
 		return descricao;
 	}
@@ -21,5 +24,15 @@ public class ProdutoREF extends GenericDomain {
 
 	public String getMarca() {
 		return marca;
+	}
+
+	public void setDescricao(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setCodBarras(String string) {
+		// TODO Auto-generated method stub
+		
 	}
 }
